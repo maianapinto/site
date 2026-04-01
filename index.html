@@ -147,6 +147,21 @@
         background-color: rgba(195, 233, 243, 0.45);
         border-color: rgba(0, 70, 81, 0.2);
       }
+      @media (max-width: 767px) {
+        .mobile-center-text {
+          text-align: center;
+        }
+        .mobile-center-stack {
+          align-items: center;
+        }
+        .mobile-center-list {
+          align-items: center;
+        }
+        .mobile-center-chip,
+        .mobile-center-cta {
+          justify-content: center;
+        }
+      }
       @media (min-width: 768px) {
         section[id] {
           scroll-margin-top: 8.5rem;
@@ -186,7 +201,7 @@
 <main class="pt-20 md:pt-24 overflow-hidden">
 <!-- Hero Section -->
 <section id="home" data-nav-section="home" class="relative px-5 md:px-8 py-14 md:py-20 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
-<div class="md:col-span-7 z-10">
+<div class="md:col-span-7 z-10 flex flex-col mobile-center-stack mobile-center-text md:text-left md:items-start">
 <h1 class="font-headline text-4xl sm:text-5xl md:text-7xl text-primary leading-tight mb-6 md:mb-8" style="">Olá! Eu sou <br><span class="italic font-normal" style="">Dra. Maiana Pinto</span></h1>
 <p class="text-lg md:text-xl text-on-surface-variant leading-relaxed max-w-xl mb-8 md:mb-10" style="">
                     Dedicada ao cuidado da saúde infantil com uma pediatria acolhedora, individualizada e baseada em evidências, acompanhando cada fase do crescimento e do desenvolvimento com atenção, escuta e orientação segura para toda a família. 
@@ -211,14 +226,14 @@
 <img class="w-full h-full object-cover" data-alt="Close-up of a doctor smiling warmly in a clinical environment, soft focus background, editorial medical photography" src="https://i.imgur.com/TYo2nCf.png" style="">
 </div>
 <!-- Signature Component: Floating Quote -->
-<div class="relative mt-4 md:mt-0 md:absolute md:-bottom-10 md:-right-12 p-6 md:p-8 bg-primary-container/90 glass-nav text-on-primary-container rounded-xl max-w-full md:max-w-xs shadow-xl">
+<div class="relative mt-4 md:mt-0 md:absolute md:-bottom-10 md:-right-12 p-6 md:p-8 bg-primary-container/90 glass-nav text-on-primary-container rounded-xl max-w-full md:max-w-xs shadow-xl mobile-center-text md:text-left">
 <span class="material-symbols-outlined text-4xl mb-4" data-icon="format_quote" style="font-variation-settings: &quot;FILL&quot; 1;">format_quote</span>
 <p class="font-headline italic text-lg leading-relaxed" style="">
                             “A pediatria vai muito além de tratar sintomas: é acompanhar cada criança e cada adolescente com ciência, sensibilidade e presença
                         </p>
 </div>
 </div>
-<div class="space-y-6 md:space-y-8 mt-4 md:mt-0">
+<div class="space-y-6 md:space-y-8 mt-4 md:mt-0 mobile-center-text md:text-left">
 <h2 class="font-headline text-3xl md:text-4xl text-primary" style="">Minha História e Missão</h2>
 <div class="space-y-6 text-on-surface-variant text-lg leading-relaxed">
 <p class="" data-end="1818" data-start="1611" style="">Meu compromisso na pediatria é oferecer um acompanhamento próximo, cuidadoso e baseado em evidências, olhando para a criança de forma integral e respeitando a individualidade de cada fase do desenvolvimento.</p>
@@ -234,22 +249,22 @@
 <div class="h-1 w-20 bg-tertiary mx-auto opacity-30"></div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12">
-<div class="bg-surface-container-lowest p-8 md:p-10 rounded-xl transition-transform hover:-translate-y-2 duration-300">
-<div class="w-14 h-14 bg-secondary-container text-primary flex items-center justify-center rounded-lg mb-6">
+<div class="bg-surface-container-lowest p-8 md:p-10 rounded-xl transition-transform hover:-translate-y-2 duration-300 mobile-center-text md:text-left">
+<div class="w-14 h-14 bg-secondary-container text-primary flex items-center justify-center rounded-lg mb-6 mx-auto md:mx-0">
 <span class="material-symbols-outlined text-3xl" data-icon="diversity_3" style="">diversity_3</span>
 </div>
 <h3 class="font-headline text-xl text-primary mb-4" style="">Escuta e acolhimento</h3>
 <p class="text-on-surface-variant" style="">Consultas conduzidas com atenção à criança e à família, valorizando vínculo, escuta e orientação individualizada.</p>
 </div>
-<div class="bg-surface-container-lowest p-8 md:p-10 rounded-xl transition-transform hover:-translate-y-2 duration-300">
-<div class="w-14 h-14 bg-secondary-container text-primary flex items-center justify-center rounded-lg mb-6">
+<div class="bg-surface-container-lowest p-8 md:p-10 rounded-xl transition-transform hover:-translate-y-2 duration-300 mobile-center-text md:text-left">
+<div class="w-14 h-14 bg-secondary-container text-primary flex items-center justify-center rounded-lg mb-6 mx-auto md:mx-0">
 <span class="material-symbols-outlined text-3xl" data-icon="clinical_notes" style="">clinical_notes</span>
 </div>
 <h3 class="font-headline text-xl text-primary mb-4" style="">Crescer e desenvolver</h3>
 <p class="text-on-surface-variant" style="">Acompanhamento pediátrico focado em marcos do desenvolvimento, prevenção e promoção de saúde em cada fase da infância</p>
 </div>
-<div class="bg-surface-container-lowest p-8 md:p-10 rounded-xl transition-transform hover:-translate-y-2 duration-300">
-<div class="w-14 h-14 bg-secondary-container text-primary flex items-center justify-center rounded-lg mb-6">
+<div class="bg-surface-container-lowest p-8 md:p-10 rounded-xl transition-transform hover:-translate-y-2 duration-300 mobile-center-text md:text-left">
+<div class="w-14 h-14 bg-secondary-container text-primary flex items-center justify-center rounded-lg mb-6 mx-auto md:mx-0">
 <span class="material-symbols-outlined text-3xl" data-icon="school" style="">school</span>
 </div>
 <h3 class="font-headline text-xl text-primary mb-4" style="">Orientação prática</h3>
@@ -260,14 +275,14 @@
 <!-- Academic Background -->
 <section data-nav-section="sobre" class="bg-surface-container-high py-16 md:py-24">
 <div class="max-w-7xl mx-auto px-5 md:px-8 flex flex-col md:flex-row gap-10 md:gap-16 items-center">
-<div class="md:w-1/2 order-2 md:order-1">
+<div class="md:w-1/2 order-2 md:order-1 mobile-center-text md:text-left">
 <h2 class="font-headline text-3xl md:text-4xl text-primary mb-8" style="">Cursos e Formação Acadêmica</h2>
-<ul class="space-y-6">
-<li class="flex gap-4 items-start" style="">
+<ul class="space-y-6 flex flex-col mobile-center-list md:items-start">
+<li class="flex gap-4 items-start max-w-md text-left" style="">
 <span class="material-symbols-outlined text-primary mt-1" data-icon="check_circle" style="">check_circle</span>
 <span class="text-lg text-on-surface" style="">Graduação em Medicina pela&nbsp; Faculdade UNIME</span>
 </li>
-<li class="flex gap-4 items-start" style="">
+<li class="flex gap-4 items-start max-w-md text-left" style="">
 <span class="material-symbols-outlined text-primary mt-1" data-icon="check_circle" style="">check_circle</span>
 <span class="text-lg text-on-surface" style="">Residência Médica em Pediatria pelas Obras Sociais Irmã Dulce</span>
 </li>
@@ -282,12 +297,12 @@
 </section>
 <!-- Especialidades (Grid) -->
 <section id="especialidades" data-nav-section="especialidades" class="py-16 md:py-24 max-w-7xl mx-auto px-5 md:px-8">
-<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-12 gap-4 md:gap-6">
+<div class="flex flex-col md:flex-row justify-between items-center md:items-end mb-10 md:mb-12 gap-4 md:gap-6 mobile-center-text md:text-left">
 <div>
 <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-tertiary" style="">Cuidados</span>
 <h2 class="font-headline text-3xl md:text-4xl text-primary mt-2" style="">Especialidades Médicas</h2>
 </div>
-<button class="text-primary font-bold border-b-2 border-primary-container pb-1 hover:text-tertiary hover:border-tertiary transition-colors" style="">Ver todas especialidades</button>
+<button class="text-primary font-bold border-b-2 border-primary-container pb-1 hover:text-tertiary hover:border-tertiary transition-colors self-center md:self-auto" style="">Ver todas especialidades</button>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 <!-- Card 1 -->
@@ -295,8 +310,8 @@
 <div class="aspect-video overflow-hidden">
 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Foto real de uma pediatra avaliando uma criança em consulta" src="https://images.pexels.com/photos/7653115/pexels-photo-7653115.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=627&amp;w=1200" style="">
 </div>
-<div class="p-8 flex flex-col flex-grow">
-<div class="flex gap-2 mb-4">
+<div class="p-8 flex flex-col flex-grow mobile-center-text mobile-center-stack md:text-left md:items-start">
+<div class="flex gap-2 mb-4 mobile-center-chip md:justify-start">
 <span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-label" style="">Desenvolvimento</span>
 </div>
 <h3 class="font-headline text-2xl text-primary mb-4" style="">Acompanhamento do Crescimento e Desenvolvimento</h3>
@@ -311,8 +326,8 @@
 <div class="aspect-video overflow-hidden">
 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Foto real de mãe alimentando um bebê durante a introdução alimentar" src="https://images.pexels.com/photos/7491176/pexels-photo-7491176.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" style="">
 </div>
-<div class="p-8 flex flex-col flex-grow">
-<div class="flex gap-2 mb-4">
+<div class="p-8 flex flex-col flex-grow mobile-center-text mobile-center-stack md:text-left md:items-start">
+<div class="flex gap-2 mb-4 mobile-center-chip md:justify-start">
 <span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-label" style="">Alimentação</span>
 </div>
 <h3 class="font-headline text-2xl text-primary mb-4" style="">Introdução Alimentar e Rotina</h3>
@@ -327,13 +342,13 @@
 <div class="aspect-video overflow-hidden">
 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Foto real de bebê recebendo vacina em atendimento pediátrico" src="https://images.unsplash.com/photo-1632053002928-1919605ee6f7?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;ixlib=rb-4.1.0&amp;q=60&amp;w=3000" style="">
 </div>
-<div class="p-8 flex flex-col flex-grow">
-<div class="flex gap-2 mb-4">
+<div class="p-8 flex flex-col flex-grow mobile-center-text mobile-center-stack md:text-left md:items-start">
+<div class="flex gap-2 mb-4 mobile-center-chip md:justify-start">
 <span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-label" style="">Prevenção</span>
 </div>
 <h3 class="font-headline text-2xl text-primary mb-4" style="">Imunização e Prevenção</h3>
 <p class="text-on-surface-variant flex-grow" style="">Acompanhamento pediátrico voltado à prevenção, atualização vacinal e proteção da saúde infantil.</p>
-<button class="mt-8 flex items-center gap-2 text-primary font-bold group" style="">
+<button class="mt-8 flex items-center gap-2 text-primary font-bold group mobile-center-cta md:justify-start" style="">
                             Saiba Mais <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1" data-icon="arrow_forward" style="">arrow_forward</span>
 </button>
 </div>
@@ -343,13 +358,13 @@
 <div class="aspect-video overflow-hidden">
 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Foto real de adolescente em sessão de acolhimento e orientação com profissional de saúde" src="https://images.pexels.com/photos/36729613/pexels-photo-36729613.jpeg?cs=srgb&amp;dl=pexels-silverkblack-36729613.jpg&amp;fm=jpg" style="">
 </div>
-<div class="p-8 flex flex-col flex-grow">
-<div class="flex gap-2 mb-4">
+<div class="p-8 flex flex-col flex-grow mobile-center-text mobile-center-stack md:text-left md:items-start">
+<div class="flex gap-2 mb-4 mobile-center-chip md:justify-start">
 <span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-label" style="">Adolescência</span>
 </div>
 <h3 class="font-headline text-2xl text-primary mb-4" style="">Saúde do Adolescente</h3>
 <p class="text-on-surface-variant flex-grow" style="">Cuidado atento às transformações físicas, emocionais e comportamentais da adolescência, com olhar integral e acolhedor.</p>
-<button class="mt-8 flex items-center gap-2 text-primary font-bold group" style="">
+<button class="mt-8 flex items-center gap-2 text-primary font-bold group mobile-center-cta md:justify-start" style="">
                             Saiba Mais <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1" data-icon="arrow_forward" style="">arrow_forward</span>
 </button>
 </div>
@@ -359,13 +374,13 @@
 <div class="aspect-video overflow-hidden">
 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Foto real de criança dormindo em ambiente tranquilo" src="https://images.pexels.com/photos/3933019/pexels-photo-3933019.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=627&amp;w=1200" style="">
 </div>
-<div class="p-8 flex flex-col flex-grow">
-<div class="flex gap-2 mb-4">
+<div class="p-8 flex flex-col flex-grow mobile-center-text mobile-center-stack md:text-left md:items-start">
+<div class="flex gap-2 mb-4 mobile-center-chip md:justify-start">
 <span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-label" style="">Bem-estar</span>
 </div>
 <h3 class="font-headline text-2xl text-primary mb-4" style="">Sono, Comportamento e Bem-Estar</h3>
 <p class="text-on-surface-variant flex-grow" style="">Investigação e orientação em questões que interferem na rotina e na qualidade de vida da criança, como sono e excesso de telas.</p>
-<button class="mt-8 flex items-center gap-2 text-primary font-bold group" style="">
+<button class="mt-8 flex items-center gap-2 text-primary font-bold group mobile-center-cta md:justify-start" style="">
                             Saiba Mais <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1" data-icon="arrow_forward" style="">arrow_forward</span>
 </button>
 </div>
@@ -375,13 +390,13 @@
 <div class="aspect-video overflow-hidden">
 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Foto real de um termômetro para representar sinais de alerta e acompanhamento em casa" src="https://images.pexels.com/photos/8670511/pexels-photo-8670511.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=627&amp;w=1200" style="">
 </div>
-<div class="p-8 flex flex-col flex-grow">
-<div class="flex gap-2 mb-4">
+<div class="p-8 flex flex-col flex-grow mobile-center-text mobile-center-stack md:text-left md:items-start">
+<div class="flex gap-2 mb-4 mobile-center-chip md:justify-start">
 <span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-label" style="">Orientação</span>
 </div>
 <h3 class="font-headline text-2xl text-primary mb-4" style="">Orientação em Sinais de Alerta</h3>
 <p class="text-on-surface-variant flex-grow" style="">Apoio às famílias para reconhecer situações que merecem atenção, como febre persistente, desconforto respiratório e mudanças importantes.</p>
-<button class="mt-8 flex items-center gap-2 text-primary font-bold group" style="">
+<button class="mt-8 flex items-center gap-2 text-primary font-bold group mobile-center-cta md:justify-start" style="">
                             Saiba Mais <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1" data-icon="arrow_forward" style="">arrow_forward</span>
 </button>
 </div>
@@ -391,13 +406,13 @@
 <!-- Contact Section -->
 <section id="agendamento" data-nav-section="especialidades" class="bg-surface-container-lowest py-14 md:py-16">
 <div class="max-w-6xl mx-auto px-5 md:px-8 space-y-6 md:space-y-8">
-<div class="max-w-3xl">
+<div class="max-w-3xl mobile-center-text md:text-left">
 <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-tertiary" style="">Agendamento</span>
 <h2 class="font-headline text-3xl md:text-4xl text-primary mt-3 mb-4" style="">Agende sua consulta</h2>
 <p class="text-on-surface-variant text-lg leading-relaxed" style="">Confira abaixo as informações de atendimento, localização e canais de agendamento das clínicas disponíveis.</p>
 </div>
-<div class="bg-surface rounded-[1.25rem] border border-outline-variant/20 shadow-lg p-6 lg:p-7 space-y-6">
-<div class="flex items-start justify-between gap-4">
+<div class="bg-surface rounded-[1.25rem] border border-outline-variant/20 shadow-lg p-6 lg:p-7 space-y-6 mobile-center-text md:text-left">
+<div class="flex flex-col md:flex-row items-center md:items-start justify-between gap-4">
 <div>
 <p class="font-label text-xs font-bold uppercase tracking-[0.18em] text-tertiary mb-2" style="">Clínica 01</p>
 <h3 class="font-headline text-2xl text-primary" style="">Clínica de Saúde e Imagem</h3>
@@ -415,7 +430,7 @@
 <p class="text-on-surface-variant leading-relaxed" style="">Escolha o número mais conveniente para marcar sua consulta.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-<div class="rounded-xl bg-surface border border-outline-variant/20 px-4 py-4 hover:border-primary/30 transition-colors">
+<div class="rounded-xl bg-surface border border-outline-variant/20 px-4 py-4 hover:border-primary/30 transition-colors mobile-center-text md:text-left">
 <p class="text-xs font-label font-bold uppercase tracking-[0.18em] text-tertiary mb-2" style="">Agendamento 01</p>
 <p class="text-lg font-headline text-primary" style="">(71) 98155-1206</p>
 <p class="mt-2 text-sm text-on-surface-variant" style="">WhatsApp e telefone</p>
@@ -424,7 +439,7 @@
 <a class="inline-flex w-full items-center justify-center rounded-lg bg-primary text-on-primary px-4 py-2.5 text-sm font-label font-semibold hover:opacity-90 transition-opacity" href="https://wa.me/5571981551206?text=Oi%2C%20gostaria%20de%20agendar%20uma%20consulta%21" rel="noreferrer" target="_blank" style="">WhatsApp</a>
 </div>
 </div>
-<div class="rounded-xl bg-surface border border-outline-variant/20 px-4 py-4 hover:border-primary/30 transition-colors">
+<div class="rounded-xl bg-surface border border-outline-variant/20 px-4 py-4 hover:border-primary/30 transition-colors mobile-center-text md:text-left">
 <p class="text-xs font-label font-bold uppercase tracking-[0.18em] text-tertiary mb-2" style="">Agendamento 02</p>
 <p class="text-lg font-headline text-primary" style="">(71) 99980-3806</p>
 <p class="mt-2 text-sm text-on-surface-variant" style="">WhatsApp e telefone</p>
@@ -442,13 +457,13 @@
 <!-- Footer -->
 <footer class="bg-[#f6f3f2] dark:bg-[#1b1c1c] w-full rounded-none">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-12 px-5 md:px-12 py-14 md:py-20 max-w-7xl mx-auto">
-<div class="md:col-span-1">
+<div class="md:col-span-1 mobile-center-text md:text-left">
 <span class="font-headline text-2xl font-bold text-[#004651] dark:text-[#fbf9f8]" style="">Dra. Maiana Pinto</span>
 <p class="mt-6 font-jakarta text-sm leading-relaxed text-[#41646c] dark:text-[#bfc8cb]" style="">
                     Pediatria com acompanhamento acolhedor, escuta atenta e orientação segura para cada fase da infância e da adolescência.
                 </p>
 </div>
-<div>
+<div class="mobile-center-text md:text-left">
 <h4 class="font-label font-bold text-primary mb-6 uppercase tracking-wider text-xs" style="">Navegação</h4>
 <ul class="space-y-4 font-jakarta text-sm leading-relaxed">
 <li class="" style=""><a class="summary-footer-link" data-nav-link="home" data-nav-region="footer" href="#home" style="">Home</a></li>
@@ -456,7 +471,7 @@
 <li class="" style=""><a class="summary-footer-link" data-nav-link="especialidades" data-nav-region="footer" href="#especialidades" style="">Especialidades</a></li>
 </ul>
 </div>
-<div>
+<div class="mobile-center-text md:text-left">
 <h4 class="font-label font-bold text-primary mb-6 uppercase tracking-wider text-xs" style="">Suporte</h4>
 <ul class="space-y-4 font-jakarta text-sm leading-relaxed">
 <li class="" style=""><a class="text-[#41646c] dark:text-[#bfc8cb] hover:text-[#573914] transition-colors duration-200" href="#" style="">Dúvidas Frequentes</a></li>
@@ -464,7 +479,7 @@
 <li class="" style=""><a class="text-[#41646c] dark:text-[#bfc8cb] hover:text-[#573914] transition-colors duration-200" href="#" style="">Termos</a></li>
 </ul>
 </div>
-<div>
+<div class="mobile-center-text md:text-left">
 <h4 class="font-label font-bold text-primary mb-6 uppercase tracking-wider text-xs" style="">Agendamento</h4>
 <p class="font-jakarta text-sm leading-relaxed text-[#41646c] dark:text-[#bfc8cb] mb-6" style="">
                     Clique abaixo para agendar sua consulta via WhatsApp ou telefone.
