@@ -102,6 +102,10 @@
       .brand-font {
         font-family: 'Poppins', sans-serif;
       }
+      .brand-mark {
+        flex-shrink: 0;
+        display: block;
+      }
       .summary-link {
         color: #41646c;
         padding-bottom: 0.25rem;
@@ -151,7 +155,10 @@
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-surface/80 glass-nav shadow-sm">
 <div class="flex justify-between items-center px-5 md:px-8 py-4 max-w-7xl mx-auto">
-<a class="brand-font text-lg sm:text-xl font-bold text-primary" href="#home" style="">Dra. Maiana Pinto</a>
+<a class="brand-font inline-flex items-center gap-3 sm:gap-4 text-lg sm:text-xl font-bold text-primary" href="#home" style="">
+<img alt="Logo Dra. Maiana Pinto" class="brand-mark h-5 w-5 sm:h-6 sm:w-6 object-contain" src="assets/maiana-logo-primary.png">
+<span>Dra. Maiana Pinto</span>
+</a>
 <div class="hidden md:flex gap-8 items-center">
 <a class="summary-link font-headline font-bold text-lg tracking-tight" data-nav-link="home" data-nav-region="header" href="#home" style="">Home</a>
 <a class="summary-link font-headline font-bold text-lg tracking-tight" data-nav-link="sobre" data-nav-region="header" href="#sobre" style="">Sobre</a>
