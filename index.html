@@ -74,6 +74,9 @@
       html {
         scroll-behavior: smooth;
       }
+      section[id] {
+        scroll-margin-top: 7.5rem;
+      }
       body,
       body * {
         -webkit-user-select: none;
@@ -123,13 +126,32 @@
         color: #004651;
         font-weight: 600;
       }
+      .summary-mobile-link {
+        color: #41646c;
+        border: 1px solid rgba(191, 200, 203, 0.5);
+        transition: color 220ms ease, border-color 220ms ease, background-color 220ms ease;
+      }
+      .summary-mobile-link:hover {
+        color: #004651;
+        border-color: rgba(0, 70, 81, 0.25);
+      }
+      .summary-mobile-link-active {
+        color: #004651;
+        background-color: rgba(195, 233, 243, 0.45);
+        border-color: rgba(0, 70, 81, 0.2);
+      }
+      @media (min-width: 768px) {
+        section[id] {
+          scroll-margin-top: 8.5rem;
+        }
+      }
     </style>
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-surface/80 glass-nav shadow-sm">
-<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-<a class="brand-font text-xl font-bold text-primary" href="#home" style="">Dra. Maiana Pinto</a>
+<div class="flex justify-between items-center px-5 md:px-8 py-4 max-w-7xl mx-auto">
+<a class="brand-font text-lg sm:text-xl font-bold text-primary" href="#home" style="">Dra. Maiana Pinto</a>
 <div class="hidden md:flex gap-8 items-center">
 <a class="summary-link font-headline font-bold text-lg tracking-tight" data-nav-link="home" data-nav-region="header" href="#home" style="">Home</a>
 <a class="summary-link font-headline font-bold text-lg tracking-tight" data-nav-link="sobre" data-nav-region="header" href="#sobre" style="">Sobre</a>
@@ -138,25 +160,33 @@
                     Agende sua Consulta
                 </a>
 </div>
-<button class="md:hidden text-primary" style="">
+<button id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden text-primary p-2 -mr-2" style="">
 <span class="material-symbols-outlined" data-icon="menu" style="">menu</span>
 </button>
 </div>
+<div id="mobile-menu" class="md:hidden hidden border-t border-outline-variant/20 bg-surface/95">
+<div class="px-5 py-4 flex flex-col gap-3">
+<a class="summary-mobile-link rounded-lg px-4 py-3 font-label font-semibold" data-nav-link="home" data-nav-region="mobile" href="#home" style="">Home</a>
+<a class="summary-mobile-link rounded-lg px-4 py-3 font-label font-semibold" data-nav-link="sobre" data-nav-region="mobile" href="#sobre" style="">Sobre</a>
+<a class="summary-mobile-link rounded-lg px-4 py-3 font-label font-semibold" data-nav-link="especialidades" data-nav-region="mobile" href="#especialidades" style="">Especialidades</a>
+<a class="inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-primary to-primary-container text-on-primary px-4 py-3 font-label text-sm font-bold uppercase tracking-widest" href="#agendamento" style="">Agende sua Consulta</a>
+</div>
+</div>
 </nav>
-<main class="pt-24 overflow-hidden">
+<main class="pt-20 md:pt-24 overflow-hidden">
 <!-- Hero Section -->
-<section id="home" data-nav-section="home" class="relative px-8 py-20 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center scroll-mt-32">
+<section id="home" data-nav-section="home" class="relative px-5 md:px-8 py-14 md:py-20 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
 <div class="md:col-span-7 z-10">
-<h1 class="font-headline text-5xl md:text-7xl text-primary leading-tight mb-8" style="">Olá! Eu sou <br><span class="italic font-normal" style="">Dra. Maiana Pinto</span></h1>
-<p class="text-xl text-on-surface-variant leading-relaxed max-w-xl mb-10" style="">
+<h1 class="font-headline text-4xl sm:text-5xl md:text-7xl text-primary leading-tight mb-6 md:mb-8" style="">Olá! Eu sou <br><span class="italic font-normal" style="">Dra. Maiana Pinto</span></h1>
+<p class="text-lg md:text-xl text-on-surface-variant leading-relaxed max-w-xl mb-8 md:mb-10" style="">
                     Dedicada ao cuidado da saúde infantil com uma pediatria acolhedora, individualizada e baseada em evidências, acompanhando cada fase do crescimento e do desenvolvimento com atenção, escuta e orientação segura para toda a família. 
                 </p>
-<div class="flex gap-4">
-<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-label text-sm font-bold uppercase tracking-widest hover:opacity-90 transition-opacity" style="">Minha Trajetória</button>
-<a class="border border-outline-variant text-primary px-8 py-4 rounded-lg font-label text-sm font-bold uppercase tracking-widest hover:bg-surface-container transition-colors inline-flex items-center justify-center" href="#agendamento" style="">Agende sua Consulta</a>
+<div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+<a class="bg-primary text-on-primary px-8 py-4 rounded-lg font-label text-sm font-bold uppercase tracking-widest hover:opacity-90 transition-opacity inline-flex items-center justify-center w-full sm:w-auto" href="#sobre" style="">Minha Trajetória</a>
+<a class="border border-outline-variant text-primary px-8 py-4 rounded-lg font-label text-sm font-bold uppercase tracking-widest hover:bg-surface-container transition-colors inline-flex items-center justify-center w-full sm:w-auto" href="#agendamento" style="">Agende sua Consulta</a>
 </div>
 </div>
-<div class="md:col-span-5 relative">
+<div class="md:col-span-5 relative w-full max-w-sm mx-auto md:max-w-none">
 <div class="aspect-[4/5] bg-surface-container-high rounded-xl overflow-hidden shadow-2xl relative z-10">
 <img class="w-full h-full object-cover" data-alt="Professional portrait of a female doctor in a white coat, elegant interior office setting, soft natural lighting, warm clinical sanctuary vibe" src="https://i.imgur.com/F60vYxP.jpeg" style="">
 </div>
@@ -164,53 +194,51 @@
 </div>
 </section>
 <!-- Biography & Signature Block -->
-<section id="sobre" data-nav-section="sobre" class="bg-surface-container-low py-24 scroll-mt-32">
-<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-20 items-start">
+<section id="sobre" data-nav-section="sobre" class="bg-surface-container-low py-16 md:py-24">
+<div class="max-w-7xl mx-auto px-5 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
 <div class="relative">
 <div class="aspect-square bg-surface-container-highest rounded-xl overflow-hidden">
 <img class="w-full h-full object-cover" data-alt="Close-up of a doctor smiling warmly in a clinical environment, soft focus background, editorial medical photography" src="https://i.imgur.com/TYo2nCf.png" style="">
 </div>
 <!-- Signature Component: Floating Quote -->
-<div class="absolute -bottom-10 -right-4 md:-right-12 p-8 bg-primary-container/90 glass-nav text-on-primary-container rounded-xl max-w-xs shadow-xl">
+<div class="relative mt-4 md:mt-0 md:absolute md:-bottom-10 md:-right-12 p-6 md:p-8 bg-primary-container/90 glass-nav text-on-primary-container rounded-xl max-w-full md:max-w-xs shadow-xl">
 <span class="material-symbols-outlined text-4xl mb-4" data-icon="format_quote" style="font-variation-settings: &quot;FILL&quot; 1;">format_quote</span>
 <p class="font-headline italic text-lg leading-relaxed" style="">
                             “A pediatria vai muito além de tratar sintomas: é acompanhar cada criança e cada adolescente com ciência, sensibilidade e presença
                         </p>
 </div>
 </div>
-<div class="space-y-8 mt-12 md:mt-0">
-<h2 class="font-headline text-4xl text-primary" style="">Minha História e Missão</h2>
+<div class="space-y-6 md:space-y-8 mt-4 md:mt-0">
+<h2 class="font-headline text-3xl md:text-4xl text-primary" style="">Minha História e Missão</h2>
 <div class="space-y-6 text-on-surface-variant text-lg leading-relaxed">
-<p class="" style=""></p><p class="" data-end="1818" data-start="1611" style="">Meu compromisso na pediatria é oferecer um acompanhamento próximo, cuidadoso e baseado em evidências, olhando para a criança de forma integral e respeitando a individualidade de cada fase do desenvolvimento.</p>
-<p class="" data-end="2128" data-start="1820" style="">Na consulta, o foco não está apenas na queixa do momento. O cuidado envolve crescimento, desenvolvimento, alimentação, imunização, sono, comportamento e prevenção, para que a família se sinta orientada com clareza e segurança em cada etapa da infância e da adolescência.</p><p class="" style=""></p>
-<p class="" style=""><br></p>
-<p class="" style=""><br></p>
+<p class="" data-end="1818" data-start="1611" style="">Meu compromisso na pediatria é oferecer um acompanhamento próximo, cuidadoso e baseado em evidências, olhando para a criança de forma integral e respeitando a individualidade de cada fase do desenvolvimento.</p>
+<p class="" data-end="2128" data-start="1820" style="">Na consulta, o foco não está apenas na queixa do momento. O cuidado envolve crescimento, desenvolvimento, alimentação, imunização, sono, comportamento e prevenção, para que a família se sinta orientada com clareza e segurança em cada etapa da infância e da adolescência.</p>
 </div>
 </div>
 </div>
 </section>
 <!-- Diferenciais (Values) -->
-<section data-nav-section="sobre" class="py-24 max-w-7xl mx-auto px-8 scroll-mt-32">
-<div class="text-center mb-16">
-<h2 class="font-headline text-4xl text-primary mb-4" style="">Diferenciais de Atendimento</h2>
+<section data-nav-section="sobre" class="py-16 md:py-24 max-w-7xl mx-auto px-5 md:px-8">
+<div class="text-center mb-12 md:mb-16">
+<h2 class="font-headline text-3xl md:text-4xl text-primary mb-4" style="">Diferenciais de Atendimento</h2>
 <div class="h-1 w-20 bg-tertiary mx-auto opacity-30"></div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-<div class="bg-surface-container-lowest p-10 rounded-xl transition-transform hover:-translate-y-2 duration-300">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12">
+<div class="bg-surface-container-lowest p-8 md:p-10 rounded-xl transition-transform hover:-translate-y-2 duration-300">
 <div class="w-14 h-14 bg-secondary-container text-primary flex items-center justify-center rounded-lg mb-6">
 <span class="material-symbols-outlined text-3xl" data-icon="diversity_3" style="">diversity_3</span>
 </div>
 <h3 class="font-headline text-xl text-primary mb-4" style="">Escuta e acolhimento</h3>
 <p class="text-on-surface-variant" style="">Consultas conduzidas com atenção à criança e à família, valorizando vínculo, escuta e orientação individualizada.</p>
 </div>
-<div class="bg-surface-container-lowest p-10 rounded-xl transition-transform hover:-translate-y-2 duration-300">
+<div class="bg-surface-container-lowest p-8 md:p-10 rounded-xl transition-transform hover:-translate-y-2 duration-300">
 <div class="w-14 h-14 bg-secondary-container text-primary flex items-center justify-center rounded-lg mb-6">
 <span class="material-symbols-outlined text-3xl" data-icon="clinical_notes" style="">clinical_notes</span>
 </div>
 <h3 class="font-headline text-xl text-primary mb-4" style="">Crescer e desenvolver</h3>
 <p class="text-on-surface-variant" style="">Acompanhamento pediátrico focado em marcos do desenvolvimento, prevenção e promoção de saúde em cada fase da infância</p>
 </div>
-<div class="bg-surface-container-lowest p-10 rounded-xl transition-transform hover:-translate-y-2 duration-300">
+<div class="bg-surface-container-lowest p-8 md:p-10 rounded-xl transition-transform hover:-translate-y-2 duration-300">
 <div class="w-14 h-14 bg-secondary-container text-primary flex items-center justify-center rounded-lg mb-6">
 <span class="material-symbols-outlined text-3xl" data-icon="school" style="">school</span>
 </div>
@@ -220,10 +248,10 @@
 </div>
 </section>
 <!-- Academic Background -->
-<section data-nav-section="sobre" class="bg-surface-container-high py-24">
-<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row gap-16 items-center">
+<section data-nav-section="sobre" class="bg-surface-container-high py-16 md:py-24">
+<div class="max-w-7xl mx-auto px-5 md:px-8 flex flex-col md:flex-row gap-10 md:gap-16 items-center">
 <div class="md:w-1/2 order-2 md:order-1">
-<h2 class="font-headline text-4xl text-primary mb-8" style="">Cursos e Formação Acadêmica</h2>
+<h2 class="font-headline text-3xl md:text-4xl text-primary mb-8" style="">Cursos e Formação Acadêmica</h2>
 <ul class="space-y-6">
 <li class="flex gap-4 items-start" style="">
 <span class="material-symbols-outlined text-primary mt-1" data-icon="check_circle" style="">check_circle</span>
@@ -231,27 +259,39 @@
 </li>
 <li class="flex gap-4 items-start" style="">
 <span class="material-symbols-outlined text-primary mt-1" data-icon="check_circle" style="">check_circle</span>
-<span class="text-lg text-on-surface" style="">Residência Médica em Pediatria pelas Obras Sociais Irmã Dulce</span>
+<span class="text-lg text-on-surface" style="">Residência Médica em Pediatria pelas Obras Sociais Irma Dulce</span>
+</li>
+<li class="flex gap-4 items-start" style="">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="check_circle" style="">check_circle</span>
+<span class="text-lg text-on-surface" style="">Especialização em Reumatologia pela Sociedade Brasileira de Reumatologia</span>
+</li>
+<li class="flex gap-4 items-start" style="">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="check_circle" style="">check_circle</span>
+<span class="text-lg text-on-surface" style="">Título de Especialista pela AMB (Associação Médica Brasileira)</span>
+</li>
+<li class="flex gap-4 items-start" style="">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="check_circle" style="">check_circle</span>
+<span class="text-lg text-on-surface" style="">Membro da Sociedade Brasileira de Reumatologia (SBR)</span>
 </li>
 </ul>
 </div>
 <div class="md:w-1/2 order-1 md:order-2 flex justify-center">
-<div class="w-full max-w-md rounded-xl overflow-hidden shadow-lg border-8 border-surface-container-lowest">
+<div class="w-full max-w-md rounded-xl overflow-hidden shadow-lg border-4 md:border-8 border-surface-container-lowest">
 <img class="w-full h-auto" data-alt="Close up of medical stethoscope and diplomas on a wooden table, warm ambient lighting, scholarly medical atmosphere" src="https://i.imgur.com/Iy5bHTj.png" style="">
 </div>
 </div>
 </div>
 </section>
 <!-- Especialidades (Grid) -->
-<section id="especialidades" data-nav-section="especialidades" class="py-24 max-w-7xl mx-auto px-8 scroll-mt-32">
-<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<section id="especialidades" data-nav-section="especialidades" class="py-16 md:py-24 max-w-7xl mx-auto px-5 md:px-8">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-12 gap-4 md:gap-6">
 <div>
 <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-tertiary" style="">Cuidados</span>
-<h2 class="font-headline text-4xl text-primary mt-2" style="">Especialidades Médicas</h2>
+<h2 class="font-headline text-3xl md:text-4xl text-primary mt-2" style="">Especialidades Médicas</h2>
 </div>
 <button class="text-primary font-bold border-b-2 border-primary-container pb-1 hover:text-tertiary hover:border-tertiary transition-colors" style="">Ver todas especialidades</button>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 <!-- Card 1 -->
 <div class="group bg-surface-container-lowest rounded-xl overflow-hidden flex flex-col h-full shadow-sm">
 <div class="aspect-video overflow-hidden">
@@ -351,11 +391,11 @@
 </div>
 </section>
 <!-- Contact Section -->
-<section id="agendamento" data-nav-section="especialidades" class="bg-surface-container-lowest py-16 scroll-mt-32">
-<div class="max-w-6xl mx-auto px-8 space-y-8">
+<section id="agendamento" data-nav-section="especialidades" class="bg-surface-container-lowest py-14 md:py-16">
+<div class="max-w-6xl mx-auto px-5 md:px-8 space-y-6 md:space-y-8">
 <div class="max-w-3xl">
 <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-tertiary" style="">Agendamento</span>
-<h2 class="font-headline text-4xl text-primary mt-3 mb-4" style="">Agende sua consulta</h2>
+<h2 class="font-headline text-3xl md:text-4xl text-primary mt-3 mb-4" style="">Agende sua consulta</h2>
 <p class="text-on-surface-variant text-lg leading-relaxed" style="">Confira abaixo as informações de atendimento, localização e canais de agendamento das clínicas disponíveis.</p>
 </div>
 <div class="bg-surface rounded-[1.25rem] border border-outline-variant/20 shadow-lg p-6 lg:p-7 space-y-6">
@@ -403,7 +443,7 @@
 </main>
 <!-- Footer -->
 <footer class="bg-[#f6f3f2] dark:bg-[#1b1c1c] w-full rounded-none">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-12 px-5 md:px-12 py-14 md:py-20 max-w-7xl mx-auto">
 <div class="md:col-span-1">
 <span class="font-headline text-2xl font-bold text-[#004651] dark:text-[#fbf9f8]" style="">Dra. Maiana Pinto</span>
 <p class="mt-6 font-jakarta text-sm leading-relaxed text-[#41646c] dark:text-[#bfc8cb]" style="">
@@ -436,9 +476,9 @@
                 </a>
 </div>
 </div>
-<div class="max-w-7xl mx-auto px-12 py-8 border-t border-outline-variant/10 text-center md:text-left">
+<div class="max-w-7xl mx-auto px-5 md:px-12 py-6 md:py-8 border-t border-outline-variant/10 text-center md:text-left">
 <p class="font-jakarta text-sm leading-relaxed text-[#41646c] dark:text-[#bfc8cb]" style="">
-                © 2026 Dra. Maiana Pinto. Todos os direitos reservados.
+                &copy; 2026 Dra. Maiana Pinto. Todos os direitos reservados.
             </p>
 </div>
 </footer>
@@ -446,11 +486,15 @@
       (function () {
         const sections = Array.from(document.querySelectorAll('[data-nav-section]'));
         const links = Array.from(document.querySelectorAll('[data-nav-link]'));
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
         let ticking = false;
 
         function applyState(link, isActive) {
           if (link.dataset.navRegion === 'header') {
             link.classList.toggle('summary-link-active', isActive);
+          } else if (link.dataset.navRegion === 'mobile') {
+            link.classList.toggle('summary-mobile-link-active', isActive);
           } else {
             link.classList.toggle('summary-footer-link-active', isActive);
           }
@@ -483,9 +527,30 @@
           });
         }
 
+        function setMobileMenu(open) {
+          if (!mobileMenu || !mobileMenuButton) {
+            return;
+          }
+
+          mobileMenu.classList.toggle('hidden', !open);
+          mobileMenuButton.setAttribute('aria-expanded', String(open));
+        }
+
         updateActiveLink();
         window.addEventListener('scroll', requestUpdate, { passive: true });
         window.addEventListener('resize', requestUpdate);
+
+        if (mobileMenuButton && mobileMenu) {
+          mobileMenuButton.addEventListener('click', () => {
+            setMobileMenu(mobileMenu.classList.contains('hidden'));
+          });
+
+          mobileMenu.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+              setMobileMenu(false);
+            });
+          });
+        }
       })();
     </script>
 </body></html>
