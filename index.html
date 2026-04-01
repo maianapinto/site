@@ -105,6 +105,9 @@
       .brand-mark {
         flex-shrink: 0;
         display: block;
+        background-color: currentColor;
+        -webkit-mask: url("https://raw.githubusercontent.com/maianapinto/site/0a3e6fd4f81cd0acef51f044e27b3005b6c076f8/logo/ChatGPT%20Image%201%20de%20abr.%20de%202026%2C%2014_18_36.png") center / contain no-repeat;
+        mask: url("https://raw.githubusercontent.com/maianapinto/site/0a3e6fd4f81cd0acef51f044e27b3005b6c076f8/logo/ChatGPT%20Image%201%20de%20abr.%20de%202026%2C%2014_18_36.png") center / contain no-repeat;
       }
       .summary-link {
         color: #41646c;
@@ -155,8 +158,8 @@
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-surface/80 glass-nav shadow-sm">
 <div class="flex justify-between items-center px-5 md:px-8 py-4 max-w-7xl mx-auto">
-<a class="brand-font inline-flex items-center gap-3 sm:gap-4 text-lg sm:text-xl font-bold text-primary" href="#home" style="">
-<img alt="Logo Dra. Maiana Pinto" class="brand-mark h-5 w-5 sm:h-6 sm:w-6 object-contain" src="https://raw.githubusercontent.com/maianapinto/site/0a3e6fd4f81cd0acef51f044e27b3005b6c076f8/logo/ChatGPT%20Image%201%20de%20abr.%20de%202026%2C%2014_18_36.png">
+<a class="brand-font inline-flex items-center gap-3 sm:gap-4 text-lg sm:text-xl font-medium text-primary" href="#home" style="">
+<span aria-hidden="true" class="brand-mark h-5 w-5 sm:h-6 sm:w-6"></span>
 <span>Dra. Maiana Pinto</span>
 </a>
 <div class="hidden md:flex gap-8 items-center">
